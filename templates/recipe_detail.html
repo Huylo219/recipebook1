@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ recipe.title }}</h2>
+
+<h3>📝 Ингредиенты:</h3>
+<div style="background-color: #f9f9f9; padding: 10px; border-radius: 5px; white-space: pre-wrap;">
+    {{ recipe.ingredients }}
+</div>
+
+<h3>👨‍🍳 Приготовление:</h3>
+<div style="background-color: #f9f9f9; padding: 10px; border-radius: 5px; white-space: pre-wrap;">
+    {{ recipe.instructions }}
+</div>
+
+<p style="margin-top: 20px;">
+    <a href="/" class="button">← Назад к рецептам</a>
+    <a href="/delete/{{ recipe.id }}" class="button delete" style="margin-left: 10px;" onclick="return confirm('Вы уверены, что хотите удалить этот рецепт?')">🗑️ Удалить рецепт</a>
+</p>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавить рецепт</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Добавление нового рецепта</h1>
+    
+    <form method="POST" action="/add">
+        <div style="margin: 10px 0;">
+            <label>Название блюда:</label><br>
+            <input type="text" name="title" style="width: 300px;" required>
+        </div>
+        
+        <div style="margin: 10px 0;">
+            <label>Ингредиенты:</label><br>
+            <textarea name="ingredients" rows="5" cols="50" required></textarea>
+        </div>
+        
+        <div style="margin: 10px 0;">
+            <label>Приготовление:</label><br>
+            <textarea name="instructions" rows="8" cols="50" required></textarea>
+        </div>
+        
+        <button type="submit">Сохранить рецепт</button>
+        <a href="/">На главную</a>
+    </form>
+</body>
+</html>
